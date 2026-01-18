@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Background1.jpg",
+      "filename" : "App-Icon-QT-RNG-.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Background2.jpg",
+      "filename" : "App-Icon-QT-RNG- 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Background3.jpg",
+      "filename" : "App-Icon-QT-RNG- 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
