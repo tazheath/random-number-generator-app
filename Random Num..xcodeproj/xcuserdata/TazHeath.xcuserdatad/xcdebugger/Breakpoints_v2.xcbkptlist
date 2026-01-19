@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EACDFFD5-8F20-4878-ABD6-F4F5CBB73B18"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD3AA7E7-36A4-4C5E-A6B1-56C08CCB13F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberGenerator/ATTConsent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "requestIfNeeded()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD3AA7E7-36A4-4C5E-A6B1-56C08CCB13F6 - 14a5b9162d696e54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in static Random_Num_.ATTAuthorization.requestIfNeeded() -&gt; ()"
+                  moduleName = "Random Num..debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/TazHeath/Desktop/iCloud/Projects/NumberGenerator/NumberGenerator/ATTConsent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22">
+               </Location>
+               <Location
+                  uuid = "BD3AA7E7-36A4-4C5E-A6B1-56C08CCB13F6 - cf61d1d6e901837c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (__C.ATTrackingManagerAuthorizationStatus) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in static Random_Num_.ATTAuthorization.requestIfNeeded() -&gt; ()"
+                  moduleName = "Random Num..debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/TazHeath/Desktop/iCloud/Projects/NumberGenerator/NumberGenerator/ATTConsent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

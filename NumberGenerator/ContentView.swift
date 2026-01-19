@@ -122,7 +122,7 @@ struct ContentView: View {
                 Spacer()
                 
                 GeometryReader { geo in
-                    BannerAdView(width: geo.size.width)
+                    BannerViewAd(width: geo.size.width)
                         .frame(width: geo.size.width, height: 50)
                 }
                 .frame(height: 50)
