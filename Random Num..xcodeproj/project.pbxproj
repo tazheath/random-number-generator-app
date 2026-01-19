@@ -279,7 +279,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Random-Num--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Random Number Generator";
+				INFOPLIST_KEY_CFBundleDisplayName = "QT Random Number Generator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifer is used to serve personalized ads.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,7 +311,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Random-Num--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Random Number Generator";
+				INFOPLIST_KEY_CFBundleDisplayName = "QT Random Number Generator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifer is used to serve personalized ads.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
