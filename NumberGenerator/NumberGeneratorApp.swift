@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct NumberGeneratorApp: App {
+    
+    init() {
+        ATTAuthorization.requestIfNeeded()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

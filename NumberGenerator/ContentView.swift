@@ -16,128 +16,118 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 0) {
-                // Main Content in ScrollView
-                ScrollView {
-                    VStack(spacing: 15) {
-                        Spacer()
-                            .frame(height: 30)
+                Spacer()
+                
+                VStack(spacing: 15) {
+                    // Logo at top
+                    Image("logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 120, height: 120)
+                    
+                    // Random Number Display
+                    VStack(spacing: 5) {
+                        Text("Your Random Number:")
+                            .font(.title2.bold())
+                            .foregroundColor(.white)
                         
-                        // Logo at top
-                        Image("logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 120, height: 120)
-                        
-                        // Random Number Display
-                        VStack(spacing: 5) {
-                            Text("Your Random Number:")
-                                .font(.title2.bold())
-                                .foregroundColor(.white)
-                            
-                            Text("\(randomNumber)")
-                                .font(.system(size: 72, weight: .bold))
-                                .foregroundColor(.white)
-                        }
-                        .padding(.vertical, 15)
-                        
-                        // Max Range Controls
-                        VStack(spacing: 15) {
-                            // Main increment/decrement buttons with text field
-                            HStack(spacing: 15) {
-                                // Decrement button
-                                Button(action: {
-                                    adjustMaxRange(by: -1)
-                                }) {
-                                    Image(systemName: "minus")
-                                        .font(.title2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .frame(width: 70, height: 70)
-                                        .background(Color(red: 0, green: 0.8, blue: 0))
-                                        .cornerRadius(10)
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                                
-                                // Text field for direct input
-                                TextField("", text: $textFieldValue)
-                                    .font(.system(size: 36, weight: .semibold))
-                                    .multilineTextAlignment(.center)
-                                    .keyboardType(.numberPad)
-                                    .focused($isTextFieldFocused)
-                                    .frame(width: 140, height: 70)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .cornerRadius(10)
-                                
-                                // Increment button
-                                Button(action: {
-                                    adjustMaxRange(by: 1)
-                                }) {
-                                    Image(systemName: "plus")
-                                        .font(.title2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .frame(width: 70, height: 70)
-                                        .background(Color(red: 0, green: 0.8, blue: 0))
-                                        .cornerRadius(10)
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                            }
-                            
-                            // Max Range label
-                            Text("Max Range: \(Int(maxRange))")
-                                .font(.subheadline)
-                                .foregroundColor(.white)
-                            
-                            // Quick jump buttons
-                            HStack(spacing: 12) {
-                                QuickJumpButton(value: -10) {
-                                    adjustMaxRange(by: -10)
-                                }
-                                QuickJumpButton(value: -5) {
-                                    adjustMaxRange(by: -5)
-                                }
-                                QuickJumpButton(value: 5) {
-                                    adjustMaxRange(by: 5)
-                                }
-                                QuickJumpButton(value: 10) {
-                                    adjustMaxRange(by: 10)
-                                }
-                            }
-                            
-                            // Slider
-                            Slider(value: $maxRange, in: 0...1000, step: 1)
-                                .accentColor(Color(red: 0, green: 0.8, blue: 0))
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 20)
-                        }
-                        .padding(.horizontal, 50)
-                        
-                        Spacer()
-                            .frame(height: 10)
-                        
-                        // Generate Button
-                        Button(action: {
-                            generateNumber()
-                        }) {
-                            Text("Generate Random Number")
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 60)
-                                .background(Color(red: 0, green: 0.8, blue: 0))
-                                .cornerRadius(10)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal, 75)
-                        
-                        Spacer()
-                            .frame(height: 100)
+                        Text("\(randomNumber)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.white)
                     }
-                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 15)
+                    
+                    // Max Range Controls
+                    VStack(spacing: 15) {
+                        // Main increment/decrement buttons with text field
+                        HStack(spacing: 15) {
+                            // Decrement button
+                            Button(action: {
+                                adjustMaxRange(by: -1)
+                            }) {
+                                Image(systemName: "minus")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 70, height: 70)
+                                    .background(Color(red: 0, green: 0.8, blue: 0))
+                                    .cornerRadius(10)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            // Text field for direct input
+                            TextField("", text: $textFieldValue)
+                                .font(.system(size: 36, weight: .semibold))
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numberPad)
+                                .focused($isTextFieldFocused)
+                                .frame(width: 140, height: 70)
+                                .background(Color.white)
+                                .foregroundColor(.black)
+                                .cornerRadius(10)
+                            
+                            // Increment button
+                            Button(action: {
+                                adjustMaxRange(by: 1)
+                            }) {
+                                Image(systemName: "plus")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 70, height: 70)
+                                    .background(Color(red: 0, green: 0.8, blue: 0))
+                                    .cornerRadius(10)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        
+                        // Max Range label
+                        Text("Max Range: \(Int(maxRange))")
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                        
+                        // Quick jump buttons
+                        HStack(spacing: 12) {
+                            QuickJumpButton(value: -10) {
+                                adjustMaxRange(by: -10)
+                            }
+                            QuickJumpButton(value: -5) {
+                                adjustMaxRange(by: -5)
+                            }
+                            QuickJumpButton(value: 5) {
+                                adjustMaxRange(by: 5)
+                            }
+                            QuickJumpButton(value: 10) {
+                                adjustMaxRange(by: 10)
+                            }
+                        }
+                        
+                        // Slider
+                        Slider(value: $maxRange, in: 0...1000, step: 1)
+                            .accentColor(Color(red: 0, green: 0.8, blue: 0))
+                            .frame(width: 300)
+                            .padding(.vertical, 20)
+                    }
+                    
+                    // Generate Button
+                    Button(action: {
+                        generateNumber()
+                    }) {
+                        Text("Generate Random Number")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 40)
+                            .padding(.vertical, 20)
+                            .background(Color(red: 0, green: 0.8, blue: 0))
+                            .cornerRadius(10)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
-                .scrollDismissesKeyboard(.immediately)
+                .padding(.horizontal, 20)
+                
+                Spacer()
+                
                 
                 // Banner Ad
                 GeometryReader { geo in
@@ -146,6 +136,7 @@ struct ContentView: View {
                 }
                 .frame(height: 50)
                 .background(Color.black)
+            
             }
         }
         .preferredColorScheme(.dark)
