@@ -14,9 +14,7 @@ struct BannerAdView: UIViewRepresentable {
     let width: CGFloat
     
     func makeUIView(context: Context) -> BannerView {
-        print("🔴 Making banner view with width: \(width)")
         let adSize = currentOrientationAnchoredAdaptiveBanner(width: width)
-        print("🔴 Ad size created: \(adSize.size)")
         let banner = BannerView(adSize: adSize)
         
         banner.adUnitID = adUnitID
